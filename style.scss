@@ -4,76 +4,122 @@
     box-sizing: border-box;
 }
 body{
-    background-color: beige;
+    background-color: lightgrey;
 }
-// .header-menu__container,
-// .header-container,
-// .header-content__container,
-// .about__container,
-// .form__container,
-// .posts__container,
-// .footer__container {
-//   max-width: 1920px;
-//   margin: auto;
-// }
-.header-container{
+.header{
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    height: 100px;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas: "header-logo header-nav header-btn_social" ". header-text  .";
+    grid-template-rows: 1.8fr 11fr;
+    grid-column-gap: 15px;
+    min-height: 710px;
     align-items: center;
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    &-logo{
+        grid-area: header-logo;
+        font-family: 'Tahu!', sans-serif;
+        font-size: 60px;
+        text-decoration: none;
+        color: black;
+        justify-self: center;
+        z-index: 10;
+    }
+    &-nav{
+        grid-area: header-nav;
+        display: grid;
+        grid-template-columns: repeat(5, 120px);
+        z-index: 10;
+    }
+    &-nav a{
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+    }
+    &-nav a:hover{
+        background-color: #ff3c2d;
+        color: white;
+        transition: all 0.5s ease-out;
+    }
+    &-btn__social{
+        grid-area: header-btn_social;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        z-index: 10;
+    }
+    &-text{
+        grid-area: header-text;
+        margin-left: -200px;
+    }  
+    &-title{
+        font-family: 'Poppins', sans-serif;
+        font-size: 70px;
+        color: white;
+        width: 800px;
+    }
+    &-subtitle{
+        font-family: 'Poppins', sans-serif;
+        font-size: 21px;
+        color: white;
+        margin-top: 30px;
+    }
+}
+.white__box-top{
+    position: absolute;
+    top: 0;
     background-color: white;
-    width:  100%;
+    height: 100px;
+    width: 100%;
 }
-header a{
-    text-decoration: none;
-    color: black;
+.white__box-bottom{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 100px;
+    width: 100%;
 }
-.header-logo{
-    width: 250px;
-    text-align: center;
-}
-.header-logo a{
-    font-family: 'Tahu!', sans-serif;
-    font-size: 60px;
-    text-decoration: none;
-    color: black;
-}
-.header-navbar{
-    display: grid;
-    grid-template-columns: 900px 300px;
-    align-items: center;
-}
-.header-navbar__list{
-    display: grid;
+.header-btn-top{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-}
-.header-navbar__list li{
-    margin: 0 20px;
-}
-.header_btn_and_social{
-    display: flex;
-}
-.header-button{
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    width: 100px;
-    height: 30px;
-    background-color: #ff3c2d;
+    background-color:#ff3c2d;
     border: none;
+    border-radius: 3px;
     color: white;
-    margin-right: 40px;
+    width: 120px;
+    margin-right: 50px;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+        transition: all 0.5s ease-out;
+    }
 }
-.header-social{
-display: flex;
-}
-.header-social__items img{
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-}
-.header-social{
-    margin: 5px;
+.header-btn-bottom{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color:#ff3c2d;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin-right: 50px;
+    cursor: pointer;
+    width: 215px;
+    height: 45px;
+    margin-top: 40px;
 }
 
+.header-social__link{
+    text-decoration: none;
+    margin: 5px 10px 0px 10px;
+}
+.header-social__link img{
+    width: 25px;
+    height: 25px;
+}
