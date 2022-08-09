@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: lightgrey;
-}
-
 .header {
   position: relative;
   display: grid;
@@ -300,4 +296,113 @@ body {
 
 .modal-btn:active {
   color: #222;
+}
+
+.our-professional-services-section {
+  display: grid;
+  grid-template-rows: 0.1fr 0.1fr 1fr;
+  justify-content: center;
+}
+
+.pro-serv-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  height: 170px;
+  justify-self: center;
+  align-self: end;
+  line-height: 200px;
+}
+
+.pro-serv-list {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-column-gap: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #ababab;
+  justify-content: center;
+  padding-bottom: 65px;
+}
+.pro-serv-list li {
+  text-align: center;
+  border: white 2px solid;
+}
+.pro-serv-list li:hover {
+  color: black;
+  border-bottom: #ff3b2d solid 2px;
+  cursor: pointer;
+}
+
+.pro-serv-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pro-serv-photos-small-preview {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.small-preview-inside-block {
+  position: absolute;
+  top: 35.5%;
+  left: 25px;
+  visibility: hidden;
+}
+
+.small-preview-1:hover .small-preview-inside-block {
+  visibility: visible;
+}
+
+.small-preview-inside-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  background-color: #ff3b2d;
+  color: white;
+  text-transform: uppercase;
+  width: 90px;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small-preview-inside-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.small-preview-inside-text img {
+  padding: 15px 0 0 10px;
+  cursor: pointer;
+}
+
+.small-preview-btn {
+  width: 350px;
+  height: 40px;
+}
+
+.btn-left {
+  background-image: url(icons/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.btn-left:active {
+  background-color: #ff3b2d;
+}
+
+.btn-right {
+  background-image: url(icons/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.btn-right:active {
+  background-color: #ff3b2d;
 }/*# sourceMappingURL=style.css.map */
