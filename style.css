@@ -612,6 +612,7 @@
   color: white;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .our-blog-section {
@@ -643,6 +644,11 @@
 
 .item {
   background-color: #f6f6f6;
+  cursor: pointer;
+  width: 386px;
+}
+.item:hover {
+  background-color: #bfbebe;
 }
 
 .item-title {
@@ -669,6 +675,9 @@
   font-size: 16px;
   color: #ff3c2d;
   font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .item-date {
@@ -694,4 +703,80 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.footer {
+  display: grid;
+  grid-template-areas: " . footer-logo . footer-links footer-resources . . . " " . footer-studio__inc . footer-contact . . footer-social . ";
+  background-color: #222;
+  color: white;
+  padding-top: 90px;
+}
+.footer-logo {
+  grid-area: footer-logo;
+  font-family: "Tahu!", sans-serif;
+  font-size: 60px;
+}
+.footer-links {
+  grid-area: footer-links;
+  margin-bottom: 50px;
+}
+.footer-links ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 2;
+}
+.footer-resources {
+  grid-area: footer-resources;
+}
+.footer-resources ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 2;
+}
+.footer-studio__inc {
+  grid-area: footer-studio__inc;
+}
+.footer-studio__inc .studio-inc-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 2;
+}
+.footer .studio-inc__block {
+  display: grid;
+  grid-template-columns: 0.1fr 0.9fr;
+}
+.footer .studio-inc__block img {
+  margin-top: 5px;
+}
+.footer-contact {
+  grid-area: footer-contact;
+}
+.footer-contact p {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.footer-social {
+  grid-area: footer-social;
+  justify-self: flex-end;
+}
+.footer-social ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.348);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer-item-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  color: #626262;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
