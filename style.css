@@ -737,6 +737,7 @@
   font-size: 16px;
   color: white;
   line-height: 2;
+  cursor: pointer;
 }
 .footer-resources {
   grid-area: footer-resources;
@@ -779,6 +780,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  cursor: pointer;
 }
 .footer-social {
   grid-area: footer-social;
@@ -800,4 +802,7 @@
 
 .footer-social-link {
   color: #f6f6f6;
+}
+.footer-social-link:hover {
+  color: #ff3b2d;
 }/*# sourceMappingURL=style.css.map */
